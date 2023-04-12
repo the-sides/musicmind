@@ -1,20 +1,17 @@
-# create-svelte
+# Music Mind
+This is the final app with Spotify, as a collection of tools to use. 
+Visualizers, Schedulable events, filters, details. Anything I think of from here on out should be built into this so I don't write auth and fetching mechanisms for a 5th time. 
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Auth Evolutions
+I intend to build this in steps:
 
-## Creating a project
+🔨 Base authentication using redirect urls
 
-If you're seeing this, you've probably already done this step. Congrats!
+💿 User database with Prisma [Auth.js](https://authjs.dev/reference/sveltekit) on top of [PlanetScale](https://planetscale.com/)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
+🕋 Server-side service with client auth for executing scheduled events
 ## Developing
+
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
