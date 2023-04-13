@@ -1,6 +1,6 @@
 {
-	"name": "svelte-sides",
-	"version": "1.1.0",
+	"name": "musicmind",
+	"version": "0.1.0",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
