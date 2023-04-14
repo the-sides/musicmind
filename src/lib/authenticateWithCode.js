@@ -1,7 +1,6 @@
 import { PRIVATE_SPOTIFY_AUTH_BASE64 } from '$env/static/private'
 
-export default async (fetch, url) => {
-    const code = new URLSearchParams(url.split('?').pop()).get('code');
+export default async (fetch, code) => {
     const params = {
       code,
       redirect_uri: 'http://localhost:3000',
