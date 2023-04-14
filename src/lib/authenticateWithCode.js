@@ -17,5 +17,13 @@ export default async (fetch, code) => {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
       body: searchParams
-    }).then(res => res.json()).catch(console.error)
+    }).then(res => res.json())
+    .then(
+      // Clean up for browser to use
+      data => {
+        data.expires_at = (new Date().getTime() + (data.expires_in * 1000))
+        return data;
+      }
+    )
+    .catch(console.error)
 }
