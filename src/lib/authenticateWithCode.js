@@ -1,9 +1,10 @@
 import { PRIVATE_SPOTIFY_AUTH_BASE64 } from '$env/static/private'
+import { PUBLIC_DOMAIN } from '$env/static/public'
 
 export default async (fetch, code) => {
     const params = {
       code,
-      redirect_uri: 'http://localhost:3000',
+      redirect_uri: PUBLIC_DOMAIN, 
       grant_type: 'authorization_code',
     }
     const searchParams = Object.keys(params).map((key) => {
